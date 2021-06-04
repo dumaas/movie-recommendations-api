@@ -12,16 +12,16 @@ class MLRegistry:
         endpoint, _ = Endpoint.objects.get_or_create(name=endpoint_name, owner=owner)
 
         # uncomment when adding new algorithms
-        # database_object, algorithm_created = MLAlgorithm.objects.get_or_create(
-        #         name=algorithm_name,
-        #         description=algorithm_description,
-        #         code=algorithm_code,
-        #         version=algorithm_version,
-        #         owner=owner,
-        #         parent_endpoint=endpoint)
+        database_object, algorithm_created = MLAlgorithm.objects.get_or_create(
+                name=algorithm_name,
+                description=algorithm_description,
+                code=algorithm_code,
+                version=algorithm_version,
+                owner=owner,
+                parent_endpoint=endpoint)
 
         # slightly hacky, but it works and prevents duplicate entries!
-        database_object = MLAlgorithm.objects.first()
+        # database_object = MLAlgorithm.objects.first()
         status = MLAlgorithmStatus(status=algorithm_status,
                                    created_by=owner,
                                    parent_mlalgorithm=database_object,
