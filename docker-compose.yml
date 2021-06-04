@@ -12,7 +12,7 @@ services:
       - db
     volumes:
       - ./:/code/api:Z
-    command: gunicorn api.wsgi -b 0.0.0.0:8000
+    # command: gunicorn --bind :8000 api.wsgi
     environment:
       - ENVIRONMENT=development
       - SECRET_KEY=f37^gjd)atl%!r#$$e-js#^o!puw+2@71sp^n=au=9p5easrx)y

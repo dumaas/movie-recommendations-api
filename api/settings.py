@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'allauth',
-    'allauth.account',
     'corsheaders',
     'dj_rest_auth',
     'dj_rest_auth.registration',
@@ -120,6 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'users.CustomUser'
