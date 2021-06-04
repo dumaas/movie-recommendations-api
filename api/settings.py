@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ENVIRONMENT = os.environ.get('ENVIRONMENT', default='development')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', default='False')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
