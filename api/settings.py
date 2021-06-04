@@ -156,10 +156,18 @@ JWT_AUTH_COOKIE = 'auth'
 ACCOUNT_EMAIL_VERIFICATION = "none"
 
 CORS_ORIGIN_WHITELIST = (
+    # local
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     'http://localhost:8080',
     'http://127.0.0.1:8080',
+
+    # netlify frontend
+    'https://vigilant-curran-034f18.netlify.app',
+    'http://www.movie-recommendations.xyz/',
+    'http://movie-recommendations.xyz/',
+    'https://www.movie-recommendations.xyz/',
+    'https://movie-recommendations.xyz/',
 )
 
 # Production
