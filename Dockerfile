@@ -1,5 +1,5 @@
 ### Build and install packages
-FROM python:3.8
+FROM python:3.8-slim
 
 RUN apt-get -y update \
     # Cleanup apt cache
