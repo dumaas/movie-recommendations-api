@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import permissions
-from drf_spectacular.views import SpectacularAPIView
+from drf_spectacular.views import SpectacularSwaggerView
 
 urlpatterns = [
     # Django admin
@@ -17,5 +17,5 @@ urlpatterns = [
     path('dj-rest-auth/registration', include('dj_rest_auth.registration.urls')),
 
     # swagger documentation
-    path('', SpectacularAPIView.as_view(), name='schema'),
+    path('', SpectacularSwaggerView.as_view(), name='swagger-ui'),
 ]
