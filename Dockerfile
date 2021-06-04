@@ -1,5 +1,5 @@
 ### Build and install packages
-FROM python:3.8-slim
+FROM python:3.8
 
 RUN apt-get -y update \
     # Cleanup apt cache
@@ -20,4 +20,4 @@ COPY . /code
 EXPOSE 8000
 
 # define the default command to run when starting the container
-# CMD ["gunicorn", "--bind", ":8000", "api.wsgi:application"]
+CMD ["gunicorn", "--bind", ":8000", "api.wsgi"]

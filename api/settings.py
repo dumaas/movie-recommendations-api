@@ -163,11 +163,11 @@ CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1:8080',
 
     # netlify frontend
-    'https://vigilant-curran-034f18.netlify.app',
-    'http://www.movie-recommendations.xyz/',
-    'http://movie-recommendations.xyz/',
-    'https://www.movie-recommendations.xyz/',
-    'https://movie-recommendations.xyz/',
+    'https://movie-recommendations-api.netlify.app',
+    'http://www.movie-recommendations.xyz',
+    'http://movie-recommendations.xyz',
+    'https://www.movie-recommendations.xyz',
+    'https://movie-recommendations.xyz',
 )
 
 # Production
