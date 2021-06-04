@@ -1,8 +1,9 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import permissions
 from drf_spectacular.views import SpectacularSwaggerView
-from django.conf.urls.static import static
 
 urlpatterns = [
     # Django admin
