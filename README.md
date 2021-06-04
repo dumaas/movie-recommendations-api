@@ -1,7 +1,8 @@
 # Movie Recommendations API
-[View it in your browser](https://movie-recommendations-api.herokuapp.com/)
 
 ![screenshot](https://github.com/dumaas/movie-recommendations-api/blob/bc4875d8a88f7a471f1c5160124b6356ff07dcef/api-screenshot.png?raw=true)
+
+[View it in your browser](https://movie-recommendations-api.herokuapp.com/)
 
 ## Requirements
 1. [Docker](https://docs.docker.com/install/)
