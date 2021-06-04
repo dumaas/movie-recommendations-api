@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  api:
+    ports:
+      - 8000:8000
+    build: .
+    restart: unless-stopped
+    networks:
+      - api
+    depends_on:
+      - db
+    volumes:
+      - ./:/code/api:Z
+    command: gunicorn api.wsgi -b 0.0.0.0:8000
+    environment:
+      - ENVIRONMENT=development
+      - SECRET_KEY=f37^gjd)atl%!r#$$e-js#^o!puw+2@71sp^n=au=9p5easrx)y
+      - DEBUG=True
+
+  db:
+    image: postgres:11
+    restart: unless-stopped
+    networks:
+      - api
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+volumes:
+  postgres_data:
+
+networks:
+  api:
+    driver: bridge

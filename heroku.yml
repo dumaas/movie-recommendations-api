@@ -1,0 +1,12 @@
+setup:
+  addons:
+  - plan: heroku-postgresql
+build:
+  docker:
+    api: Dockerfile
+release:
+  image: api
+  command:
+    - python manage.py collectstatic --noinput
+run:
+  web: gunicorn api.wsgi
