@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'dj_rest_auth',
     'dj_rest_auth.registration',
-    'drf_yasg',
+    'drf_spectacular',
 
     # Local
     'endpoints.apps.EndpointsConfig',
@@ -134,17 +134,20 @@ SITE_ID = 1
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
-        # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
-    # 'DEFAULT_AUTHENTICATION_CLASSES': [
-        # 'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.TokenAuthentication',
-        # 'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
-    # ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'users.serializers.CustomUserRegistrationSerializer',
+}
+
+# drf-spectacular
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Movie Recommendations API',
+    'DESCRIPTION': 'Created by Christian Gonzalez.',
+    'VERSION': '1.0.0',
+    'CONTACT': {'christiangonzalezblack@gmail.com',}
 }
 
 # JWT Auth setup
