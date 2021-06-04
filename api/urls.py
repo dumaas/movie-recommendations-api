@@ -17,6 +17,6 @@ urlpatterns = [
     path('dj-rest-auth/registration', include('dj_rest_auth.registration.urls')),
 
     # swagger documentation
-    path('', SpectacularAPIView.as_view(), name='schema'),
-    path('swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    # path('', SpectacularAPIView.as_view(), name='schema'),
+    path('', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
